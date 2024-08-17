@@ -13,7 +13,10 @@ def contact_view(request):
     return render(request, 'contact.html')
 
 def about_view(request):
-    return render(request, 'about.html')
+    context = {
+        'name': 'Mahdi'
+    }
+    return render(request, 'about.html', context)
 
 def portfolios_view(request):
     return render(request, 'portfolios.html')
