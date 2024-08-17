@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +79,7 @@
     </div>
   </header>
 
-  <main class="main">
+  {% comment %} <main class="main">
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
@@ -91,9 +92,9 @@
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div><!-- End Page Title --> {% endcomment %}
 
-    <!-- Starter Section Section -->
+    {% comment %} <!-- Starter Section Section -->
     <section id="starter-section" class="starter-section section">
 
       <!-- Section Title -->
@@ -108,7 +109,9 @@
 
     </section><!-- /Starter Section Section -->
 
-  </main>
+  </main> {% endcomment %}
+  {% block content %}
+  {% endblock %}
 
   <footer id="footer" class="footer accent-background">
 
