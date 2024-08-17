@@ -14,3 +14,9 @@ def contact_view(request):
 
 def about_view(request):
     return render(request, 'about.html')
+
+def portfolios_view(request):
+    return render(request, 'portfolios.html')
+
+def services_view(request):
+    return render(request, 'services.html')
