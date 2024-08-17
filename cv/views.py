@@ -12,7 +12,8 @@ def portfolio_detail_view(request):
     return render(request, 'portfolio-details.html')
 
 def contact_view(request):
-    return render(request, 'contact.html')
+    context = get_about_context()
+    return render(request, 'contact.html', context)
 
 def about_view(request):
     context = get_about_context()
@@ -23,7 +24,7 @@ def portfolios_view(request):
 
 def services_view(request):
     context= {
-        'count': range(6)
+        'count': range(1,7)
     }
     return render(request, 'services.html', context)
 
@@ -32,5 +33,6 @@ def get_about_context():
         'name': 'Mahdi',
         'profile': 'Backend Developer',
         'email': 'example@gmail.com',
-        'phone': '01234567890'
+        'phone': '01234567890',
+        'address': 'Iran, Tehran'
     }
