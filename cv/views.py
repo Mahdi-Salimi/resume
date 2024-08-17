@@ -22,7 +22,10 @@ def portfolios_view(request):
     return render(request, 'portfolios.html')
 
 def services_view(request):
-    return render(request, 'services.html')
+    context= {
+        'count': range(6)
+    }
+    return render(request, 'services.html', context)
 
 def get_about_context():
     return {
